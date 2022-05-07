@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tietEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:id="@+id/tvCreatePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Password"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tietPassword"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@color/white"
+        android:hint="See criteria below" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40sp" />
+
+    <TextView
+        android:id="@+id/tvRepeatPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat Password"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tietRepeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tvRequirements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:text="Password should be at least 8 characters long, contain at least 1 number,
+at least 1 uppercase letter,
+and at least 1 lowercase letter.
+You can use special characters"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
 
 </LinearLayout>

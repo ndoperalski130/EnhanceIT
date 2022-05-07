@@ -5,6 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/black">
+    android:background="@color/black"
+
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivGreenFlagBanner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/logo_green_flag2x"
+        android:layout_marginTop="50sp"
+        />
+
+    <TextView
+        android:id="@+id/tvOpener"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GreenFlag customers can create an account to access"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:flow_wrapMode="aligned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivFirstCheck"
+        android:src="@drawable/tick2x"
+        app:layout_constraintTop_toBottomOf="@id/tvOpener"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCarHealth"
+        android:text="Car health updates"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/ivFirstCheck"
+        app:layout_constraintTop_toBottomOf="@id/tvOpener"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
