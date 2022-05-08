@@ -21,27 +21,20 @@
 
     <TextView
         android:id="@+id/tvOpener"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GreenFlag customers can create an account to access"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        app:flow_wrapMode="aligned"
+        android:fontFamily="@font/museosans_300"
+        android:textSize="20sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ivFirstCheck"
-        android:src="@drawable/tick2x"
-        app:layout_constraintTop_toBottomOf="@id/tvOpener"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20sp"
+        app:layout_constraintTop_toTopOf="parent"
         />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,8 +42,52 @@
         android:text="Car health updates"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/ivFirstCheck"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvOpener"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableLeft="@drawable/tick2x"
+        android:drawablePadding="10sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRequestResucue"
+        android:text="Request rescure onnline"
+        android:fontFamily="@font/museosans_300"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCarHealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableLeft="@drawable/tick2x"
+        android:drawablePadding="10sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/museosans_300"
+        android:id="@+id/tvPolicy"
+        android:textSize="20sp"
+        android:text="Policy information"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvRequestResucue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableLeft="@drawable/tick2x"
+        android:drawablePadding="10sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:id="@+id/btnCreateAccount"
+        android:fontFamily="@font/museosans_300"
+        android:background="@drawable/gradient_button_background2x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Create an account"
         />
 
 
