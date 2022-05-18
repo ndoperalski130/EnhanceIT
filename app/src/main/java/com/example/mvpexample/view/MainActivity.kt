@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.*
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvpexample.R
 import com.example.mvpexample.databinding.ActivityMainBinding
@@ -29,10 +30,19 @@ class MainActivity : AppCompatActivity() , MainView{
         
         _binding = ActivityMainBinding.inflate(layoutInflater)
 
-        moviePresenter = MoviePresenter(this, MainInteractor())
+
         movieAdapter = MovieAdapter()
-        
+        moviePresenter = MoviePresenter(this, MainInteractor())
+        moviePresenter.getAllMovies()
+
+
+
         setContentView(binding.root)
+
+        recyclerView = findViewById(R.id.rvMovies)
+//        val lm = LinearLayoutManager(this)
+        //recyclerView.layoutManager = lm
+        //recyclerView.adapter = MovieAdapter()
 
 
         
@@ -47,13 +57,17 @@ class MainActivity : AppCompatActivity() , MainView{
 
     override fun hideProgress() {
         binding.pbLoading.visibility = GONE
+        binding.rvMovies.visibility = VISIBLE
+        binding.tvErrorText.visibility = GONE
         //TODO("Not yet implemented")
     }
 
     override fun setData(movies: List<Movie>) {
         binding.rvMovies.apply {
             movieAdapter.setMovieList(movies)
+            layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = movieAdapter
+            visibility = VISIBLE
         }
         //TODO("Not yet implemented")
     }

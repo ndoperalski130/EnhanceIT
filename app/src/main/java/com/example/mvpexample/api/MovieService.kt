@@ -1,6 +1,7 @@
 package com.example.mvpexample.api
 
 import com.example.mvpexample.model.Movie
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -9,7 +10,7 @@ import retrofit2.http.GET
 interface MovieService {
 
     @GET("movielist.json")
-    suspend fun getAllMovies(): Response<List<Movie>>
+    fun getAllMovies(): Call<List<Movie>>
 
 
 
@@ -21,7 +22,7 @@ interface MovieService {
             if(instance == null)
             {
                 instance = Retrofit.Builder()
-                    .baseUrl("https://howtoandroid.com/")
+                    .baseUrl("https://howtodoandroid.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
             }

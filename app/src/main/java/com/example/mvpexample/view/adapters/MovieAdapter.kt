@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.mvpexample.R
 import com.example.mvpexample.databinding.MovieListItemBinding
 import com.example.mvpexample.model.Movie
 
@@ -21,9 +22,11 @@ class MovieAdapter(private val movies: MutableList<Movie> = mutableListOf()) : R
         {
             binding.tvMovieTitle.text = movie.name
 
+
             Glide.with(binding.ivPoster)
                 .load(movie.imageUrl)
                 .into(binding.ivPoster)
+
 
         }
     }
