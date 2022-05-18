@@ -9,14 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mvpexample.R
 import com.example.mvpexample.databinding.ActivityMainBinding
 import com.example.mvpexample.databinding.MovieShmovieLayoutBinding
+import com.example.mvpexample.model.MainInteractor
 import com.example.mvpexample.model.Movie
 import com.example.mvpexample.presenter.MoviePresenter
+import com.example.mvpexample.view.adapters.MovieAdapter
 
 class MainActivity : AppCompatActivity() , MainView{
 
     private lateinit var moviePresenter: MoviePresenter
     private lateinit var recyclerView: RecyclerView
-
+    private lateinit var movieAdapter: MovieAdapter
     // viewBinding
     // pattern to prevent memory leaks, LeakCanary
     private var _binding : ActivityMainBinding? = null
@@ -26,6 +28,9 @@ class MainActivity : AppCompatActivity() , MainView{
         super.onCreate(savedInstanceState)
         
         _binding = ActivityMainBinding.inflate(layoutInflater)
+
+        moviePresenter = MoviePresenter(this, MainInteractor())
+        movieAdapter = MovieAdapter()
         
         setContentView(binding.root)
 
@@ -46,7 +51,10 @@ class MainActivity : AppCompatActivity() , MainView{
     }
 
     override fun setData(movies: List<Movie>) {
-
+        binding.rvMovies.apply {
+            movieAdapter.setMovieList(movies)
+            adapter = movieAdapter
+        }
         //TODO("Not yet implemented")
     }
 

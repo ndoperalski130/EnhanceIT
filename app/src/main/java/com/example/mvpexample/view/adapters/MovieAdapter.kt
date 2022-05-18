@@ -12,7 +12,7 @@ class MovieAdapter(private val movies: MutableList<Movie> = mutableListOf()) : R
     fun setMovieList(list: List<Movie>)
     {
         movies.addAll(list)
-
+        notifyDataSetChanged()
     }
 
     inner class MovieViewHolder(private val binding: MovieListItemBinding) : RecyclerView.ViewHolder(binding.root)
