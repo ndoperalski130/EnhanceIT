@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 
 data class RandomWeatherResponse(
-    val results: List<RandomWeather>
+    val list: List<RandomWeather>
 )
 
 @Parcelize

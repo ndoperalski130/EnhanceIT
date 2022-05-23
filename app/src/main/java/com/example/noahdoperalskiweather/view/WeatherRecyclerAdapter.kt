@@ -1,5 +1,6 @@
 package com.example.noahdoperalskiweather.view
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.noahdoperalskiweather.databinding.WeatherListItemBinding
@@ -14,8 +15,9 @@ class WeatherRecyclerAdapter(private val list: MutableList<RandomWeather> = muta
     {
         fun onBind(randomWeather: RandomWeather)
         {
-            binding.tvActualTemperature.text = randomWeather.list[0].main.temp.toString()
-            binding.tvFeelsLikeTemperature.text = randomWeather.list[0].main.feels_like.toString()
+
+            binding.tvActualTemperature.text = "randomWeather.list[0].main.temp.toString()"
+            binding.tvFeelsLikeTemperature.text = "Hello World"
 
             binding.root.setOnClickListener {
                 openDetails(randomWeather)
@@ -33,9 +35,7 @@ class WeatherRecyclerAdapter(private val list: MutableList<RandomWeather> = muta
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): WeatherRecyclerAdapter.ViewHolder {
-        TODO("Not yet implemented")
-    }
+    ): WeatherRecyclerAdapter.ViewHolder = ViewHolder(WeatherListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     override fun onBindViewHolder(holder: WeatherRecyclerAdapter.ViewHolder, position: Int) {
         holder.onBind(list[position])

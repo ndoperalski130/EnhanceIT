@@ -18,7 +18,7 @@ interface WeatherService {
 
     companion object {
         private var instance: WeatherService? = null
-        const val URL = "https://api.openweathermap.org/data/2.5/"
+        //const val URL = "https://api.openweathermap.org/data/2.5/"
 
         fun getService() : WeatherService
         {

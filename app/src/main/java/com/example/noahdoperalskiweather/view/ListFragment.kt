@@ -61,7 +61,7 @@ class ListFragment() : Fragment() {
     {
 
         viewModel.randomWeather.observe(viewLifecycleOwner) { response ->
-            if(response.results.isNullOrEmpty())
+            if(response.list.isNullOrEmpty())
             {
                 println("Response is null or empty $response")
                 //binding!!.tvErrorText.text = "Network Error"
@@ -69,7 +69,7 @@ class ListFragment() : Fragment() {
             else
             {
                 recyclerViewAdapter = WeatherRecyclerAdapter(openDetails = ::openDetails)
-                recyclerViewAdapter.setWeatherList(response.results)
+                recyclerViewAdapter.setWeatherList(response.list)
                 binding.rvWeatherList.layoutManager = LinearLayoutManager(requireActivity().applicationContext)
                 binding.rvWeatherList.adapter = recyclerViewAdapter
             }
