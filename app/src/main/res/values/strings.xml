@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NoahDoperalskiWeather</string>
+    <string name="hint">Input City to search for…</string>
+</resources>
