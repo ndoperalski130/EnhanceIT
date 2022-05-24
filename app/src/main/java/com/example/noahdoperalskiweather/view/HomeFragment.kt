@@ -30,9 +30,9 @@ class HomeFragment : Fragment() {
                 val city = binding.etCityName.text.toString()
 
                 val frag = ListFragment()
-                val bundle = Bundle()
-                bundle.putString("CITY", city)
-                frag.arguments = bundle
+//                val bundle = Bundle()
+//                bundle.putString("CITY", city)
+//                frag.arguments = bundle
 
                 parentFragmentManager.beginTransaction().replace(R.id.fcvContainer, frag)
                     .commit()

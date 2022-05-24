@@ -10,9 +10,9 @@ import retrofit2.http.Query
 
 interface WeatherService {
 
-    @GET("forecast")
+    @GET("forecast/")
     suspend fun getWeather(
-        @Query("q") q: String? = null,
+        @Query("q") q: String? = "London",
         @Query("appid") appid: String = "5fc4ab57504f58871bcf98e074687af6"
     ) : Response<RandomWeatherResponse>
 

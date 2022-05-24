@@ -43,9 +43,9 @@ class ListFragment() : Fragment() {
         _binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
         //val bundle = Bundle().getBundle("CITY")
-        val thecity = arguments?.getString("CITY")
-        println("City is: $thecity")
-        viewModel.getWeather(thecity)
+//        val thecity = arguments?.getString("CITY")
+//        println("City is: $thecity")
+        viewModel.getWeather("London")
 
         configureObserver()
         Thread.sleep(1000)
