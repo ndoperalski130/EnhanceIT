@@ -7,7 +7,7 @@
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1887031408308004" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1887031408308004" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.2776268115942029" />
-        <entry key="app/src/main/res/layout/weather_list_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/weather_list_item.xml" value="0.25" />
       </map>
     </option>
   </component>

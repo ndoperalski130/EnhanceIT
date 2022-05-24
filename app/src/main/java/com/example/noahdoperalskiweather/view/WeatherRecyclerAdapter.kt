@@ -16,7 +16,7 @@ class WeatherRecyclerAdapter(private val list: MutableList<RandomWeather> = muta
         fun onBind(randomWeather: RandomWeather)
         {
 
-            binding.tvActualTemperature.text = "randomWeather.list[0].main.temp.toString()"
+            //binding.tvActualTemperature.text = "randomWeather.list[0].main.temp.toString()"
             binding.tvFeelsLikeTemperature.text = "Hello World"
 
             binding.root.setOnClickListener {
